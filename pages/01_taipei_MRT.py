@@ -13,22 +13,9 @@ def create_map():
         sidebar_visible=True,
     )
 
-    building_pmtiles = "https://overturemaps-tiles-us-west-2-beta.s3.amazonaws.com/2025-04-23/buildings.pmtiles"
-    road_pmtiles = "https://overturemaps-tiles-us-west-2-beta.s3.amazonaws.com/2025-04-23/transportation.pmtiles"
-    building_style = {
-        "layers": [
-            {
-                "id": "Buildings",
-                "source": "buildings",
-                "source-layer": "building",
-                "type": "line",
-                "paint": {
-                    "line-color": "#ff0000",
-                    "line-width": 1,
-                },
-            },
-        ]
-    }
+   
+    road_pmtiles = "pages/data/TpeMRTRoutes_TWD97.shp"
+   
     road_style = {
         "layers": [
             {
@@ -43,9 +30,7 @@ def create_map():
             },
         ]
     }
-    m.add_pmtiles(
-        building_pmtiles, style=building_style, tooltip=True, fit_bounds=False
-    )
+   
     m.add_pmtiles(road_pmtiles, style=road_style, tooltip=True, fit_bounds=False)
     return m
 
