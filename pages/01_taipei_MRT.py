@@ -43,4 +43,4 @@ def create_map():
 def Page():
     m = create_map()
     
-    return solara.Widget(m)
+    return solara.widgets(m)
