@@ -5,16 +5,15 @@ import leafmap.leafmap as leafmap
 def create_map():
 
     m = leafmap.Map(
-        style="CartoDB.DarkMatter",
         projection="globe",
         height="750px",
         center=[121.5, 25.05], # <-- 更改中心點到台北 (捷運路線的合理位置)
         zoom=10,               # <-- 調整縮放級別
         sidebar_visible=True,
     )
-    
-    # 🚨 修正：假設您已經將 TpeMRTRoutes_TWD97.shp 轉換為 TpeMRTRoutes.geojson
-    road_data = "pages/data/TpeMRTRoutes.geojson" 
+    m.add_basemap("CartoDB.DarkMatter")
+
+    road_data = "pages/data/tpeMRT.geojson" 
     
     # 定義 GeoJSON 的樣式，通常使用 style_callback 或 style 參數
     # 在 Leafmap 中，直接傳遞 MapLibre style 字典給 GeoJSON 可能不如 add_pmtiles 直接，
