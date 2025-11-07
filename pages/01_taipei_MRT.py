@@ -42,5 +42,5 @@ def create_map():
 @solara.component
 def Page():
     m = create_map()
-    # Leafmap 實例 m 必須調用其 to_solara() 方法才能在 Solara 中正確顯示
-    return m.to_solara()
+    
+    return solara.Figure(m)
