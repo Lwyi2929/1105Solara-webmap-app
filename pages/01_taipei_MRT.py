@@ -2,6 +2,9 @@ import solara
 import leafmap.maplibregl as leafmap
 
 def create_map():
+    base_dir = os.path.dirname(__file__) if "__file__" in globals() else os.getcwd()
+    geojson_path = os.path.join(base_dir, "..", "data", "tpeMRT.geojson")
+
     m = leafmap.Map(
         center=[121.55555, 25.08722],
         zoom=16,
