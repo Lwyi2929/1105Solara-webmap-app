@@ -13,7 +13,7 @@ def create_map():
     )
     m.add_basemap("CartoDB.DarkMatter")
 
-    road_data = "data/tpeMRT.geojson" 
+    road_data = "/workspaces/1105Solara-webmap-app/data/tpeMRT.geojson" 
 
     line_style = {
         "color": "#ffffff",  # 線條顏色
