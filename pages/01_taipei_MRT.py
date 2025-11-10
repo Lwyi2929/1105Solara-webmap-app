@@ -42,5 +42,4 @@ def create_map():
 @solara.component
 def Page():
     m = create_map()
-    
-    return m
+    return m.to_solara()
