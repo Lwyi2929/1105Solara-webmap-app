@@ -13,7 +13,7 @@ def create_map():
     )
     m.add_basemap("CartoDB.DarkMatter")
 
-    road_data = "pages/data/tpeMRT.geojson" 
+    road_data = "data/tpeMRT.geojson" 
 
     line_style = {
         "color": "#ffffff",  # 線條顏色
@@ -34,4 +34,4 @@ def create_map():
 @solara.component
 def Page():
     m = create_map()
-    return m.to_solara()
+    return solara.FigureMatplotlib(m.to_html())
