@@ -12,8 +12,8 @@ def create_map():
         sidebar_visible=True,
     )
     m.add_basemap("CartoDB.DarkMatter")
-    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/345dd492fa9c0138c126b3de75483a2881ed8991/stations.geojson", name="捷運站")
-    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/master/routes.geojson", name="路線")
+    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/345dd492fa9c0138c126b3de75483a2881ed8991/stations.geojson", name="station")
+    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/master/routes.geojson", name="routes")
 
     return m
 
