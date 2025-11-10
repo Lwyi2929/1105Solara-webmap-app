@@ -1,12 +1,9 @@
-import solara
-import leafmap.leafmap as leafmap
 import os
 import solara
 import leafmap
 
 def create_map():
-    # 使用 __file__ 取得當前檔案的真實位置
-    base_dir = os.path.dirname(__file__)
+    base_dir = os.path.dirname(__file__) if "__file__" in globals() else os.getcwd()
     road_data = os.path.join(base_dir, "..", "data", "tpeMRT.geojson")
 
     m = leafmap.Map(
@@ -33,4 +30,5 @@ def create_map():
 @solara.component
 def Page():
     m = create_map()
-    return m.to_solara()
+    html = m.to_html()  # ✅ 取代 to_solara()
+    return solara.HTML(tag="div", unsafe_innerHTML=html)
