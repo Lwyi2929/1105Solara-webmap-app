@@ -32,6 +32,6 @@ def Page():
         """
         
 
-        solara.Markdown(markdown)
+    solara.Markdown(markdown)
     m = create_map()
     return m.to_solara()
