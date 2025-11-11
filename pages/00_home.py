@@ -6,10 +6,7 @@ def Page():
     with solara.Column(align="center"):
         markdown = """
         ## 台北GIS儀表板
-        This is a Solara template for a 3D mapping application using Leafmap and MapLibre. Click on the menu above to see the different examples.
-        <br>
-        Source code: <https://github.com/opengeos/solara-maplibre>
-        ![image](https://github.com/user-attachments/assets/efc9e43b-99c0-40b4-af08-4971e8b96919)
+        台北GIS儀表板是一個以 **Solara** 為基礎開發的互動式三維地圖應用程式，整合 **Leafmap** 與 **MapLibre GL** 技術，能即時呈現台北地區的地理空間資訊。  
         """
 
         solara.Markdown(markdown)
