@@ -33,11 +33,6 @@ def create_map():
     )
     m.add_colorbar_to_sidebar(cmap="terrain", label="Elevation")
 
-    image = "https://i.imgur.com/KeiAsTv.gif"
-    m.add_image_to_sidebar(image=image, expanded=False)
-
-    video = "https://static-assets.mapbox.com/mapbox-gl-js/drone.mp4"
-    m.add_video_to_sidebar(video, expanded=False)
     return m
 
 
