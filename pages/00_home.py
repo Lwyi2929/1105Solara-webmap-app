@@ -5,7 +5,7 @@ import solara
 def Page():
     with solara.Column(align="center"):
         markdown = """
-        ## 3D Mapping with Leafmap and MapLibre
+        ## 台北GIS儀表板
         This is a Solara template for a 3D mapping application using Leafmap and MapLibre. Click on the menu above to see the different examples.
         <br>
         Source code: <https://github.com/opengeos/solara-maplibre>
